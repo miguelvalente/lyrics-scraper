@@ -13,7 +13,7 @@
 ```
 
 ### Downloading Fastext Model
-- You need to download <a href = "https://fasttext.cc/docs/en/language-identification.html" lid.176.bin</a> from FastText in order to clean the lyrics later on.
+- You need to download <a href="https://fasttext.cc/docs/en/language-identification.html" target="_blank">`lid.176.bin`</a> from FastText in order to clean the lyrics later on.
 - Just leave on the same folder as the repo
 
 ---
@@ -29,14 +29,13 @@ python3 --genius-token = "INSERT YOUR GENIUS TOKEN HERE"
 ### Cleaning Scrapped Lyrics
 
 ```python
-[python3](python3) --clean-lyrics=True
+python3 --clean-lyrics=True
 ```
 
 
 ## Aditional Information
 
-- You can change the genre downloaded by editing choosen_categories in get_artists(). You need to manualy inspect
+- You can change the genre downloaded by editing choosen_categories in get_artists(). You need to manualy inspect the categories returned. Look into raw_categories
 
----
 
-## Reference this is fyou use it
+## Reference this is if you use it
