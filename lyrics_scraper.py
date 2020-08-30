@@ -1,7 +1,6 @@
 import csv
 import random
-import argparse
-import spotipy
+zimport spotipy
 import csv
 import fasttext
 import os
