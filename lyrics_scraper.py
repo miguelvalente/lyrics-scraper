@@ -1,11 +1,12 @@
 import csv
 import random
-zimport spotipy
+import spotipy
 import csv
 import fasttext
 import os
 import pandas as pd
 import numpy as np
+import argparse
 from os import path
 from tqdm import tqdm
 from os import listdir
@@ -137,7 +138,7 @@ def main(args):
     data_path = "data"
 
     try:
-        os.mkdir(path)
+        os.mkdir(data_path)
     except OSError:
         print ("Creation of the directory %s failed" % path)
     else:
@@ -149,17 +150,17 @@ def main(args):
     else:
         print("Artists have been scrapped")
 
-    if args[1]:
+    if args.clean_lyrics:
         clean_lyrics()
     else:
-        scrape_all_lyrics(args[0])
+        scrape_all_lyrics(args.genius_token)
 
 
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--genius-token",help="You need to get a API token from Genius Website", type=str, required = True)
+    parser.add_argument("--genius-token",type=str, help="You need to get a API token from Genius Website",  required = True)
     parser.add_argument("--clean-lyrics", type=bool, help = "It cleans existing lyrics, removes non english lyricks and lyrics smaller then 350 characters", required = False, default = False)
     args = parser.parse_args()
     main(args)
