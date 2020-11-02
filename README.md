@@ -38,4 +38,4 @@ python3 --clean-lyrics=True
 - You can change the genre downloaded by editing choosen_categories in get_artists(). You need to manualy inspect the categories returned. Look into raw_categories
 
 
-## Reference this is if you use it
+# Reference this is if you use it
